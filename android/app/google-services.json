@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "195413448380",
+    "project_id": "khaled-7de44",
+    "storage_bucket": "khaled-7de44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:195413448380:android:033a3b9ff290e27edbe2b9",
+        "android_client_info": {
+          "package_name": "com.example.task_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZe0esFaeYuivVRyG-7fbAyY_y0NlfbDY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
