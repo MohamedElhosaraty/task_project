@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:task_project/cart.dart';
 import 'package:task_project/favourites.dart';
 
 class Details2_Screen extends StatefulWidget {
@@ -27,7 +28,12 @@ class _Details2_ScreenState extends State<Details2_Screen> {
             padding: const EdgeInsets.only(right: 24),
             child: Stack(
               children: [
-                Icon(Icons.shopping_cart,color: Colors.black,),
+                InkWell(
+                    onTap : (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => Cart_Screen(),));
+                    },
+                    child: Icon(Icons.shopping_cart,color: Colors.black,)),
                 Positioned(
                   top: 2,
                   left: 14,

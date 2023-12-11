@@ -359,38 +359,7 @@ class _Favourites_ScreenState extends State<Favourites_Screen> {
                   ),
                 ],
               ),
-              Container(
-                height: 69,
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    SizedBox(
-                      width: 40,
-                    ),
-                    Icon(
-                      Icons.home,
-                      size: 36,
-                      color: Color(0xffcccccc),
-                    ),
-                    SizedBox(
-                      width: 96,
-                    ),
-                    Icon(
-                      Icons.favorite,
-                      size: 36,
-                      color: Color(0xff6c70eb),
-                    ),
-                    SizedBox(
-                      width: 96,
-                    ),
-                    Icon(
-                      Icons.shopping_cart,
-                      size: 36,
-                      color: Color(0xffcccccc),
-                    ),
-                  ],
-                ),
-              ),
+
             ],
           ),
         ),

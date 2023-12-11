@@ -16,16 +16,12 @@ class _Categories_ScreenState extends State<Categories_Screen> {
       appBar: AppBar(
         backgroundColor: Color(0xffF9FAFB),
         elevation: 0,
-        title: Text(
+        title:const Text(
             "Categories",style: TextStyle(
           color: Color(0xff040415),fontWeight: FontWeight.w500,fontSize: 18,
           letterSpacing: -0.408,
         ),),
         centerTitle: true,
-        actions: [
-          Image.asset('assets/images/search2.png',),
-        ],
-
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -33,25 +29,16 @@ class _Categories_ScreenState extends State<Categories_Screen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 11,
+              const SizedBox(
+                height: 15,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                          "Men",style: TextStyle(
-                        fontSize: 14,fontWeight: FontWeight.w500,color: Color(0xff040415)
-                      ),),
-                    SizedBox(
-                      height: 9,
-                    ),
-                    Image.asset("assets/images/Rectangle 8.png")
-                    ],
-                  ),
+                children:const [
+                  Text(
+                      "Men",style: TextStyle(
+                    fontSize: 14,fontWeight: FontWeight.w500,color: Color(0xff040415)
+                  ),),
                   Text(
                     "Women",style: TextStyle(
                       fontSize: 14,fontWeight: FontWeight.w500,color: Color(0xff040415)
@@ -62,7 +49,7 @@ class _Categories_ScreenState extends State<Categories_Screen> {
                   ),),
                 ],
               ),
-              SizedBox(
+              const  SizedBox(
                 height: 24,
               ),
               Stack(
@@ -278,25 +265,6 @@ class _Categories_ScreenState extends State<Categories_Screen> {
                         ],
                       ),
                     ],
-                  ),
-                  Positioned(
-                    top: 100,
-                    child: Container(
-                      height: 88,
-
-                      color: Colors.white,
-                      child: Row(
-                        children: [
-                          SizedBox(width: 40,),
-                          Icon(Icons.home,size: 36,color: Color(0xff6c70eb),),
-                          SizedBox(width: 96,),
-                          Icon(Icons.favorite,size: 36,color: Color(0xffCCCCCC),),
-                          SizedBox(width: 96,),
-                          Icon(Icons.shopping_cart,size: 36,color: Color(0xffcccccc),),
-
-                        ],
-                      ),
-                    ),
                   ),
                 ],
               ),

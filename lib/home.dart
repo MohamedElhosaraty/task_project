@@ -19,7 +19,6 @@ class _Home_ScreenState extends State<Home_Screen> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         elevation: 0,
-        //backgroundColor: Color(0xffF9FAFB),
         title: Text(
             "Apparel",style: TextStyle(
           fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff040415)
@@ -37,26 +36,16 @@ class _Home_ScreenState extends State<Home_Screen> {
               SizedBox(
                 height: 10,
               ),
-              Container(
-                width: 366,
-                height: 74,
-                decoration: BoxDecoration(
-                  color: Color(0xffEDEEEF),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Image.asset("assets/images/search.png"),
-                      Text(
-                        "Search for tshirts, jeans, shorts, jackets",style: TextStyle(
-                          fontSize: 14,fontWeight: FontWeight.w500,
-                          color: Color(0xff8C9199)
-                      ),)
-                    ],
-                  ),
+              TextFormField(
+                decoration:const InputDecoration(
+
+                  labelText: 'Search for tshirts, jeans, shorts, jackets',
+                  labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff8C9199)),
+                  prefixIcon: Icon(Icons.search_outlined),
+                  border: OutlineInputBorder(),
                 ),
               ),
               SingleChildScrollView(

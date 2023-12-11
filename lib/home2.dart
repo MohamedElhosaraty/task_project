@@ -29,8 +29,11 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                 color: Color(0xff040415)),
           ),
           centerTitle: true,
-          actions: [
-            Image.asset("assets/images/notifi.png"),
+          actions:const [
+            Padding(
+              padding:  EdgeInsets.only(right: 15.0),
+              child: Icon(Icons.notifications_outlined,color: Colors.black,size: 35,),
+            )
           ],
         ),
         body: SingleChildScrollView(
@@ -42,28 +45,15 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                 SizedBox(
                   height: 15,
                 ),
-                Container(
-                  width: 366,
-                  height: 74,
-                  decoration: BoxDecoration(
-                    color: Color(0xffEDEEEF),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Image.asset("assets/images/search.png"),
-                        Text(
-                          "Search for tshirts, jeans, shorts, jackets",
-                          style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.w500,
-                              color: Color(0xff8C9199)),
-                        )
-                      ],
-                    ),
+                TextFormField(
+                  decoration:const InputDecoration(
+                    labelText: 'Search for tshirts, jeans, shorts, jackets',
+                    labelStyle: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w500,
+                      color: Color(0xff8C9199)),
+                    prefixIcon: Icon(Icons.search_outlined),
+                    border: OutlineInputBorder(),
                   ),
                 ),
                 SizedBox(
@@ -85,7 +75,6 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                         ),
                       ),
                       Image.asset("assets/images/man6.png",fit: BoxFit.cover),
-
                     ],
                   ),
                 ),
@@ -93,7 +82,7 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                   height: 16,
                 ),
                 Row(
-                  children: [
+                  children:const [
                     Text(
                       "Olive Zip-Front Jacket",style: TextStyle(
                       fontSize: 20,fontWeight: FontWeight.w500,color: Color(0xff040415)
