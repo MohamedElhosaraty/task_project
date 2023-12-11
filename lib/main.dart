@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:task_project/botton_bar.dart';
 import 'package:task_project/cart.dart';
 import 'package:task_project/categories.dart';
 import 'package:task_project/details.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
     );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Sing_Screen(),
+      home: Bottom_Bar(),
     );
   }
 }

@@ -15,19 +15,11 @@ class _Home_ScreenState extends State<Home_Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(),
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         elevation: 0,
-        backgroundColor: Color(0xffF9FAFB),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => Home2_Screen(),
-                ));
-          },
-          icon: (Icon(Icons.menu)),
-          color: Color(0xff040415), ),
+        //backgroundColor: Color(0xffF9FAFB),
         title: Text(
             "Apparel",style: TextStyle(
           fontSize: 18,fontWeight: FontWeight.w500,color: Color(0xff040415)
@@ -71,34 +63,40 @@ class _Home_ScreenState extends State<Home_Screen> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Stack(
-                      children: [
-                        Positioned(
-                          top: 53,
-                          child: Container(
-                            width: 309,
-                            height: 186,
-                          decoration: BoxDecoration(
-                            color: Color(0xff6C70EB),
-                            borderRadius: BorderRadius.circular(16)
+                    InkWell(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => Home2_Screen(),));
+                      },
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            top: 53,
+                            child: Container(
+                              width: 309,
+                              height: 186,
+                            decoration: BoxDecoration(
+                              color: Color(0xff6C70EB),
+                              borderRadius: BorderRadius.circular(16)
+                            ),
+                        ),
                           ),
+                          Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(24),
+                                child: Text('man',style: TextStyle(
+                                  color: Colors.white,fontWeight: FontWeight.w600,fontSize: 26
+                                ),),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 24),
+                                child: Image.asset('assets/images/man.png'),
+                              ),
+                            ],
+                          ),
+                        ]
                       ),
-                        ),
-                        Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(24),
-                              child: Text('man',style: TextStyle(
-                                color: Colors.white,fontWeight: FontWeight.w600,fontSize: 26
-                              ),),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(right: 24),
-                              child: Image.asset('assets/images/man.png'),
-                            ),
-                          ],
-                        ),
-                      ]
                     ),
                     SizedBox(
                       width: 20,
@@ -250,8 +248,6 @@ class _Home_ScreenState extends State<Home_Screen> {
                   ],
                 ),
               ),
-
-
             ],
           ),
         ),

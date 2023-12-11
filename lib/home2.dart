@@ -17,15 +17,10 @@ class _Home2_ScreenState extends State<Home2_Screen> {
           elevation: 0,
           backgroundColor: Color(0xffF9FAFB),
           leading: IconButton(
-            onPressed: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Categories_Screen(),
-                  ));
-            },
-            icon: (Icon(Icons.menu)),
-            color: Color(0xff040415), ),
+              onPressed: (){
+                Navigator.pop(context);
+              }, icon: Icon(Icons.arrow_back_ios_new,
+          color: Colors.black,)),
           title: Text(
             "Apparel",
             style: TextStyle(
@@ -74,19 +69,25 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                 SizedBox(
                   height: 30,
                 ),
-                Stack(
-                  children: [
-                    Container(
-                      width: 366,
-                      height: 273,
-                      decoration: BoxDecoration(
-                        color: Color(0x44122675),
-                        borderRadius: BorderRadius.circular(20),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(
+                        builder: (context) => Details_Screen(),));
+                  },
+                  child: Stack(
+                    children: [
+                      Container(
+                        width: 366,
+                        height: 273,
+                        decoration: BoxDecoration(
+                          color: Color(0x44122675),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
                       ),
-                    ),
-                    Image.asset("assets/images/man6.png",fit: BoxFit.cover),
+                      Image.asset("assets/images/man6.png",fit: BoxFit.cover),
 
-                  ],
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 16,
@@ -120,23 +121,6 @@ class _Home2_ScreenState extends State<Home2_Screen> {
                       ),
                     ),
                     Image.asset("assets/images/man7.png",fit: BoxFit.cover),
-                    Positioned(
-                        top: 200,
-                        child: Image.asset("assets/images/bottonna.png"),),
-                    Positioned(
-                      top: 230,
-                      child: Row(
-                        children: [
-                          SizedBox(width: 40,),
-                          Icon(Icons.home,size: 36,color: Color(0xff6c70eb),),
-                          SizedBox(width: 96,),
-                          Icon(Icons.favorite,size: 36,color: Color(0xffCCCCCC),),
-                          SizedBox(width: 96,),
-                          Icon(Icons.shopping_cart,size: 36,color: Color(0xffcccccc),),
-
-                        ],
-                      ),
-                    ),
 
                   ],
                 ),

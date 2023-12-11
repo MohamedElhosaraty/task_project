@@ -17,7 +17,10 @@ class _Details_ScreenState extends State<Details_Screen> {
         backgroundColor: Colors.white,
         leading: Padding(
           padding: const EdgeInsets.only(left: 24),
-          child: Icon(Icons.arrow_back,color: Color(0xff040415),),
+          child: IconButton(onPressed: (){
+            Navigator.pop(context);
+          },
+              icon: (Icon(Icons.arrow_back,color: Color(0xff040415),))),
         ),
         actions: [
           Padding(
