@@ -17,7 +17,7 @@ class _Home_ScreenState extends State<Home_Screen> {
     return Scaffold(
       drawer: Drawer(),
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        foregroundColor: Colors.black,
         elevation: 0,
         title: Text(
             "Apparel",style: TextStyle(

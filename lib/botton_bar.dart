@@ -32,7 +32,7 @@ class _Bottom_BarState extends State<Bottom_Bar> {
         currentIndex: currentIndex,
         selectedIconTheme: IconThemeData(size: 40,),
         selectedFontSize: 20,
-        items: [
+        items:const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home), label: 'Home',
           ),
