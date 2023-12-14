@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:task_project/home.dart';
+import 'package:task_project/localization/localization_methods.dart';
+import 'package:task_project/localization/set_localization.dart';
 import 'package:task_project/sing.dart';
 
 class Login_screen extends StatelessWidget {
@@ -88,8 +90,8 @@ class Login_screen extends StatelessWidget {
                               ));
                         }
                       },
-                      child:const Text(
-                        "Login",
+                      child: Text(
+                        tr(  'login',context),
                         style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
